@@ -16,4 +16,6 @@ add_executable(untitled main.c
         SimpleLinkedList.h
         TestSuite3.c
         TestSuite3.h
+        AdvancedLinkedList.c
+        AdvancedLinkedList.h
 )
