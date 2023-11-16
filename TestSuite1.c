@@ -6,7 +6,7 @@
 #include "TestObject.h"
 #include <stdio.h>
 
-void test1() {
+void suite1_test1() {
     // Start the timer
     Timer timer;
     startTimer(&timer);
@@ -27,7 +27,7 @@ void test1() {
     printf("Time taken for %d objects to be created %d times: %f seconds\n", numObjects, numLoops, elapsedMillis);
 }
 
-void test2() {
+void suite1_test2() {
     // Start the timer
     Timer timer;
     startTimer(&timer);
@@ -48,7 +48,7 @@ void test2() {
     printf("Time taken for %d objects to be created %d times: %f seconds\n", numObjects, numLoops, elapsedMillis);
 }
 
-void test3() {
+void suite1_test3() {
     // Start the timer
     Timer timer;
     startTimer(&timer);
@@ -69,7 +69,7 @@ void test3() {
     printf("Time taken for %d objects to be created %d times: %f seconds\n", numObjects, numLoops, elapsedMillis);
 }
 
-void test4() {
+void suite1_test4() {
     // Start the timer
     Timer timer;
     startTimer(&timer);
@@ -90,7 +90,7 @@ void test4() {
     printf("Time taken for %d objects to be created %d times: %f seconds\n", numObjects, numLoops, elapsedMillis);
 }
 
-void test5() {
+void suite1_test5() {
     // Start the timer
     Timer timer;
     startTimer(&timer);
@@ -111,7 +111,7 @@ void test5() {
     printf("Time taken for %d objects to be created %d times: %f seconds\n", numObjects, numLoops, elapsedMillis);
 }
 
-void test6() {
+void suite1_test6() {
     // Start the timer
     Timer timer;
     startTimer(&timer);
@@ -132,7 +132,7 @@ void test6() {
     printf("Time taken for %d objects to be created %d times: %f seconds\n", numObjects, numLoops, elapsedMillis);
 }
 
-void test7() {
+void suite1_test7() {
     // Start the timer
     Timer timer;
     startTimer(&timer);

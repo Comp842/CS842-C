@@ -5,12 +5,12 @@
 #ifndef UNTITLED_TESTSUITE1_H
 #define UNTITLED_TESTSUITE1_H
 
-void test1();
-void test2();
-void test3();
-void test4();
-void test5();
-void test6();
-void test7();
+void suite1_test1();
+void suite1_test2();
+void suite1_test3();
+void suite1_test4();
+void suite1_test5();
+void suite1_test6();
+void suite1_test7();
 
 #endif //UNTITLED_TESTSUITE1_H
