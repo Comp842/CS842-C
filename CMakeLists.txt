@@ -18,4 +18,6 @@ add_executable(untitled main.c
         TestSuite3.h
         AdvancedLinkedList.c
         AdvancedLinkedList.h
+        TestSuite4.c
+        TestSuite4.h
 )

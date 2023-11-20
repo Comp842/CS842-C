@@ -7,54 +7,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Function to create a new AdvancedLinkedList node with random data
+struct AdvancedLinkedList* createAdvancedLinkedList() {
+    int numOfObjects = rand() % 5 + 1;
 
-
-// Function to create a new AdvancedLinkedList node with default values
-AdvancedLinkedList* createAdvancedLinkedList() {
-    AdvancedLinkedList *node = (AdvancedLinkedList *)malloc(sizeof(AdvancedLinkedList));
-    if (node != NULL) {
-        node->data = ;
-        node->next = NULL;
-    }
-    return node;
+    struct AdvancedLinkedList* newNode = (struct AdvancedLinkedList*)malloc(sizeof(struct AdvancedLinkedList));
+    newNode->data = (struct TestObject*)malloc(numOfObjects * sizeof(struct TestObject));
+    newNode->next = NULL;
+    return newNode;
 }
 
 // Function to create a new AdvancedLinkedList node with specified data and next node
-AdvancedLinkedList* createAdvancedLinkedListWithData(int data, AdvancedLinkedList *next) {
-    AdvancedLinkedList *node = (AdvancedLinkedList *)malloc(sizeof(AdvancedLinkedList));
-    if (node != NULL) {
-        node->data = data;
-        node->next = next;
-    }
-    return node;
+struct AdvancedLinkedList* de(struct TestObject* data, struct AdvancedLinkedList* next) {
+    struct AdvancedLinkedList* newNode = (struct AdvancedLinkedList*)malloc(sizeof(struct AdvancedLinkedList));
+    newNode->data = data;
+    newNode->next = next;
+    return newNode;
 }
 
-// Function to create a new AdvancedLinkedList node with specified data and a null next node
-AdvancedLinkedList* createAdvancedLinkedListWithDataOnly(int data) {
-    return createAdvancedLinkedListWithData(data, NULL);
-}
-
-// Function to get the data of a AdvancedLinkedList node
-int getData(const AdvancedLinkedList *node) {
-    return node->data;
-}
-
-// Function to set the data of a AdvancedLinkedList node
-void setData(AdvancedLinkedList *node, int data) {
+// Function to set data for an AdvancedLinkedList node
+void setAdvancedLinkedListNodeData(struct AdvancedLinkedList* node, struct TestObject* data) {
     node->data = data;
 }
 
-// Function to get the next node of a AdvancedLinkedList node
-AdvancedLinkedList* getNext(const AdvancedLinkedList *node) {
-    return node->next;
-}
-
-// Function to set the next node of a AdvancedLinkedList node
-void setNext(AdvancedLinkedList *node, AdvancedLinkedList *next) {
+// Function to set next node for an AdvancedLinkedList node
+void setAdvancedLinkedListNodeNext(struct AdvancedLinkedList* node, struct AdvancedLinkedList* next) {
     node->next = next;
 }
 
-// Function to free the memory allocated for a AdvancedLinkedList node
-void destroyAdvancedLinkedList(AdvancedLinkedList *node) {
-    free(node);
+// Function to get data from an AdvancedLinkedList node
+struct TestObject* getAdvancedLinkedListNodeData(struct AdvancedLinkedList* node) {
+    return node->data;
+}
+
+// Function to get next node from an AdvancedLinkedList node
+struct AdvancedLinkedList* getAdvancedLinkedListNodeNext(struct AdvancedLinkedList* node) {
+    return node->next;
+}
+
+// Function to free memory allocated for an AdvancedLinkedList node
+void destroyAdvancedLinkedList(struct AdvancedLinkedList* node) {
+    if(node->next == NULL){
+        free(node->data);
+        free(node);
+    }
+    else
+        destroyAdvancedLinkedList(node->next);
 }

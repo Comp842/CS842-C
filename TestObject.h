@@ -19,6 +19,9 @@ struct TestObject {
     short shortVariable;
 };
 
+struct TestObject * createObjects(int numObjects);
 void createAndDiscardObjects(int numObjects);
+void destroyObject(struct TestObject* arrOfTestObj);
+
 
 #endif //UNTITLED_TESTOBJECT_H
