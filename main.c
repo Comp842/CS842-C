@@ -2,9 +2,9 @@
 #include "TestSuite2.h"
 #include "TestSuite3.h"
 #include "TestSuite4.h"
+#include "TestSuite5.h"
 
 int main() {
-
     suite1_test1();
     suite1_test2();
     suite1_test3();
@@ -40,6 +40,17 @@ int main() {
     suite4_test6();
     suite4_test7();
     suite4_test8();
+
+    suite5_test1();
+    suite5_test2();
+    suite5_test3();
+    suite5_test4();
+    suite5_test5();
+    suite5_test6();
+    suite5_test7();
+    suite5_test8();
+    suite5_test9();
+    suite5_test10();
 
     return 0;
 }
