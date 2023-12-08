@@ -51,6 +51,9 @@ void destroyAdvancedLinkedList(struct AdvancedLinkedList* node) {
         free(node->data);
         free(node);
     }
-    else
+    else{
         destroyAdvancedLinkedList(node->next);
+        free(node->data);
+        free(node);
+    }
 }
